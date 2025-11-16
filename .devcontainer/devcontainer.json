@@ -1,0 +1,10 @@
+{
+  "name": "DevSecOps Assessment",
+  "dockerFile": "Dockerfile",
+  "runArgs": ["--privileged"],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "bash /usr/local/bin/setup-tools.sh",
+  "remoteUser": "root"
+}

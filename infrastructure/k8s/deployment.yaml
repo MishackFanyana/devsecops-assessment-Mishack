@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: countryservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: countryservice
+  template:
+    metadata:
+      labels:
+        app: countryservice
+    spec:
+      securityContext:
+        runAsNonRoot: true
+      containers:
+        - name: countryservice
+          image: countryservice:latest
+          ports:
+            - containerPort: 8080
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsUser: 10001
