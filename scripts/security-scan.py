@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 import argparse, os, re, json, math
 from pathlib import Path
 
@@ -72,3 +72,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
