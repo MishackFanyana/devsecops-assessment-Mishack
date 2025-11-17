@@ -1,4 +1,4 @@
-# Base image for Codespaces
+
 FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu
 
 USER root
@@ -75,4 +75,5 @@ WORKDIR /workspace
 # Post-creation script to finalize setup
 RUN echo '#!/bin/bash\npip3 install -U pip\n' > /usr/local/bin/setup-tools.sh && \
     chmod +x /usr/local/bin/setup-tools.sh
+
 
