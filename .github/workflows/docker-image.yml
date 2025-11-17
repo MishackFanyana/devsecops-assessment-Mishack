@@ -11,11 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
     - name: Build Docker image
-      run: docker build . \
-            --file .devcontainer/Dockerfile \
-            --tag my-image-name:$(date +%s)
+      run: docker build . --file .devcontainer/Dockerfile --tag my-image-name:$(date +%s)
+
 
